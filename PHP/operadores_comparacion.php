@@ -40,4 +40,9 @@
     var_dump($resultado);
     $resultado = $numUno > $textUno;
     var_dump($resultado);
+    $resultado = $numUno >= $textUno;
+    var_dump($resultado);
+    $resultado = $numUno >= $textUno;
+    var_dump($resultado); 
+    
 ?>

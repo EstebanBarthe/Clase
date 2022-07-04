@@ -2,17 +2,36 @@
 <html>
     <head>
         <title>Mi Web</title>
+        <style>
+            *{
+                color: purple;
+            }
+            h2{
+                color:red;
+            }
+            .fondoverde{
+                background-color: green;
+            }
+            #idPrimero{
+                background-color: aquamarine;
+            }
+        </style>
     </head>
     <body>
+        <p style="color:blue">
+            Esto es un parrafo.
+            <br>
+            <span style="color: orange;">Ya estoy </span> aprendiendo a programar en HTML</span>
         </p>
         <div id="divPrimario"> 
             <h2>TITULO</h2>
             <div id="divTexto">
                 <h4>Texto del titulo</h4>
             </div>
-         
         </div>
-         <div>
+        <hr>
+        <hr>
+            <h2>Tabla</h2>
             <table width="100%" border="2">
                 <thead>
                     <tr>
@@ -25,31 +44,31 @@
                     <tr>
                         <td>1</td>
                         <td>uno</td>
-                        <td>primera</td>
+                        <td class="fondoverde">primera</td>
                         <td>one</td>
 
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>dos</td>
+                        <td class="fondoverde">dos</td>
                         <td>segunda</td>
-                        <td>two</td>
+                        <td id="idPrimero">two</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>tres</td>
+                        <td id="idPrimero">3</td>
+                        <td class="fondoverde" id="idPrimero">tres</td>
                         <td>tercera</td>
                         <td>three</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>cuatro</td>
+                        <td class="fondoverde">cuatro</td>
                         <td>cuarta</td>
                         <td>four</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td>cinco</td>
+                        <td id="idPrimero">5</td>
+                        <td class="fondoverde">cinco</td>
                         <td>quinta</td>
                         <td>five</td>
                     </tr>
