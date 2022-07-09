@@ -1,0 +1,51 @@
+
+* {
+    color: purple;
+}
+
+h2{
+    color:red;
+}
+
+.fondoverde{
+    background-color: rgb(204, 40, 219);
+    color: deeppink;
+}
+
+.fuenteGrande{
+    font-size: 30px;
+    color:rgb(217, 203, 0);
+}
+
+#idPrimero{
+    background-color: aquamarine;
+    font-size: 25px;
+}
+
+@media(max-resolution: 500px){
+
+    h2{
+        color: coral;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
