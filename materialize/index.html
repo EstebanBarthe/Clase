@@ -1,22 +1,605 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<html>
+	<head>
+		<title>Mi Dragon</title>
+		<link rel="shortcut icon" href="img/continuar.png" />
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/micss.css"  media="screen,projection"/>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			.voyAbajo {
+				position:fixed;
+				bottom:0;
+				left:0;
+				width:100%;
+			}
 
-    <body>
+						
+			@font-face {
+				font-family: "Pacific";
+				src: url('font/Pacifico/Pacifico-Regular.ttf');
+			}
 
-        <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
-            
-        <h1> HOLA </h1>
+			@font-face {
+				font-family: "MarckScript";
+				src: url('font/MarckScript/MarckScript-Regular.ttf');
+			}
 
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
+			@font-face {
+				font-family: "HerrVonMuellerhoff";
+				src: url('font/Herr_Von_Muellerhoff/HerrVonMuellerhoff-Regular.ttf');
+			}
+
+			@font-face {
+				font-family: "DawningofaNewDay";
+				src: url('font/Dawning_of_a_New_Day/DawningofaNewDay-Regular.ttf');
+			}
+
+			@font-face {
+				font-family: "RampartOne";
+				src: url('font/Rampart_One/RampartOne-Regular.ttf');
+			}
+
+			input:not([type]):focus:not([readonly]),
+			input[type=text]:not(.browser-default):focus:not([readonly]),
+			input[type=password]:not(.browser-default):focus:not([readonly]),
+			input[type=email]:not(.browser-default):focus:not([readonly]),
+			input[type=url]:not(.browser-default):focus:not([readonly]),
+			input[type=time]:not(.browser-default):focus:not([readonly]),
+			input[type=date]:not(.browser-default):focus:not([readonly]),
+			input[type=datetime]:not(.browser-default):focus:not([readonly]),
+			input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+			input[type=tel]:not(.browser-default):focus:not([readonly]),
+			input[type=number]:not(.browser-default):focus:not([readonly]),
+			input[type=search]:not(.browser-default):focus:not([readonly]),
+			textarea.materialize-textarea:focus:not([readonly]) {
+				border-bottom: 1px solid #673ab7;
+				-webkit-box-shadow: 0 1px 0 0 #673ab7;
+						box-shadow: 0 1px 0 0 #673ab7;
+			}
+
+			.fondo {
+				background: lightblue url("../img/fondos/fondo_001.png");
+				background-repeat:no-repeat;
+				background-size: cover;
+			}
+
+			.fondoVioletas{
+				background-image: radial-gradient(circle at 37.66% 32.38%, #ffffff 0, #ceccea 50%, #8388ba 100%);
+				background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffff 16.67%, #ffffff 33.33%, #faf4ff 50%, #eae2f8 66.67%, #d7d1f3 83.33%, #c3c4ee 100%);
+			}
+
+			p#preline  {
+				white-space: pre-line;
+			}
+
+			.rmTitulo { 
+				font-size: 4.2rem;
+				line-height: 110%;
+				margin: 0rem 0 0rem 0;
+				font-family: "Pacific";
+				-webkit-text-stroke: 2px #673ab7;
+			}
+
+			.rmSubTitulo { 
+				font-size: 4.2rem;
+				line-height: 110%;
+				margin: 0rem 0 0rem 0;
+				font-family: "RampartOne";
+				-webkit-text-stroke: 3px #673ab7;
+				color: #a69cbe;
+			}
+
+		</style>
+
+
+	</head>
+
+	<body>
+
+				
+		<nav class="nav-extended">
+			<div class="nav-wrapper cyan">
+				<a href="#" class="brand-logo center"><span class="red-text text-darken-4">Lo</span>Go</a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+					<i class="material-icons">menu</i>
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down ">
+					<li><a href="sass.html">HTML</a></li>
+					<li class="cyan"><a href="badges.html">CSS</a></li>
+					<li><a href="collapsible.html">JavaScript</a></li>
+				</ul>
+			</div>
+			<div class="nav-content cyan lighten-2">
+				<ul class="tabs tabs-transparent">
+					<li class="tab"><a class="active" href="#test1">Test 1</a></li>
+					<li class="tab"><a href="#test2">Test 2</a></li>
+					<li class="tab"><a href="#test3">Test 3</a></li>
+					<li class="tab"><a href="#test4">Test 4</a></li>
+					<li class="tab"><a href="#test5">Test 5</a></li>
+				</ul>
+			</div>
+		  </nav>
+
+		<ul class="sidenav" id="mobile-demo">
+			<li><a href="sass.html">Sass</a></li>
+			<li><a href="badges.html">Components</a></li>
+			<li><a href="collapsible.html">JavaScript</a></li>
+		</ul>
+
+		<div id="test1" class="col s12 blue">
+			<div class="container red">
+				<h3>Grilla</h3>
+				<div class="row">
+					<div class="col s12 teal">Soy Grilla de 12</div>
+					<div class="col s3 orange">Son grilla de 3</div>
+					<div class="col s4 lime">Son grilla de 4</div>
+					<div class="col s5 light-green">Son grilla de 5</div>
+					<div class="col s8 green">Son grilla de 8</div>
+					<div class="col s6 cyan accent-1">Son grilla de 6</div>
+					<div class="col s4 indigo darken-1">Son grilla de 4</div>
+				</div>
+				<div class="row hide-on-med-only">
+					<div class="col s3 offset-s6 orange">Son grilla de 3</div>
+					<div class="col s4 lime ">Son grilla de 4</div>
+					<div class="col s5 light-green">Son grilla de 5</div>
+					<div class="col s8 green">Son grilla de 8</div>
+					<div class="col s12">Son grilla de 8</div>
+					<div class="col s6 cyan accent-1">Son grilla de 6</div>
+					<div class="col s4 indigo darken-1">Son grilla de 4</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m12 l12 teal">Soy Grilla de 12</div>
+					<div class="col s12 m6 l3 orange">Son grilla de 3</div>
+					<div class="col s12 m6 l4 lime">Son grilla de 4</div>
+					<div class="col s12 m4 l5 light-green">Son grilla de 5</div>
+					<div class="col s12 m2 l8 green">Son grilla de 8</div>
+					<div class="col s12 m8 l6 cyan accent-1">Son grilla de 6</div>
+					<div class="col s12 l4 indigo darken-1">Son grilla de 4</div>
+				</div>
+			</div>
+		</div>
+		<div id="test2" class="col s12">
+			<div class="container">
+				<h3>Tabla</h3>
+				<table class="striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Item Name</th>
+							<th>Item Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+							<td>$0.87</td>
+							<td>
+								<a class='dropdown-trigger btn' href='#' data-target='btnTable1'>Drop Me!</a>
+								<ul id='btnTable1' class='dropdown-content'>
+									<li><a href="#!">one</a></li>
+									<li><a href="#!">two</a></li>
+									<li class="divider" tabindex="-1"></li>
+									<li><a href="#!">three</a></li>
+									<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+									<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+								</ul>
+							</td>			
+						</tr>
+						<tr>
+							<td>Alan</td>
+							<td>Jellybean</td>
+							<td>$3.76</td>
+							<td>
+								<a class='dropdown-trigger btn' href='#' data-target='btnTable2'>Drop Me!</a>
+								<ul id='btnTable2' class='dropdown-content'>
+									<li><a href="#!">one</a></li>
+									<li><a href="#!">two</a></li>
+									<li class="divider" tabindex="-1"></li>
+									<li><a href="#!">three</a></li>
+									<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+									<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+								</ul>
+							</td>
+				  		</tr>
+						<tr>
+							<td>Jonathan</td>
+							<td>Lollipop</td>
+							<td>$7.00</td>
+							<td>
+								<a class='dropdown-trigger btn' href='#' data-target='btnTable3'>Drop Me!</a>
+								<ul id='btnTable3' class='dropdown-content'>
+									<li class="divider" tabindex="-1"></li>
+									<li><a href="#!">three</a></li>
+									<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+									<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+								</ul>
+							</td>
+				 		</tr>
+					</tbody>
+				</table>	
+
+			</div>
+			<br><br><br>
+		</div>
+		<div id="test3" class="col s12">
+			<div class="container">	
+				<h3>Formulario</h3>
+			 	<div class="row">
+					<!--
+						Estos los los methos disponibles
+						GET: es visible en la URL 
+						POST: No es visible el envio de datos en la url
+					-->
+					<form class="col s12" action="index.html" method="POST" >
+						<div class="row">
+							<div class="input-field col s6">
+								<input class="validate" id="first_name" type="text" placeholder="texto">
+								<label for="first_name">Nombre</label>
+							</div>
+							<div class="input-field col s6">
+								<input class="validate" id="last_name" type="text">
+								<label for="last_name">Apellidos</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input class="validate" id="disabled" type="text" disabled value="I am not editable">
+								<label for="disabled">Disabled</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input class="validate" id="password" type="password">
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input class="validate" id="email" type="email">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input class="validate" id="number" type="number">
+								<label for="number">Numero</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input class="validate" id="date" type="date">
+								<label for="date">Fecha</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s4">
+								<input type="text" class="datepicker">
+								<label for="dateDp">Fecha</label>
+							</div>
+							<div class="input-field col s4">
+								<input class="validate" id="time" type="time">
+								<label for="time">Hora</label>
+							</div>
+							<div class="input-field col s4">								
+ 								<input type="text" class="timepicker">        
+								<label for="dateDp">Hora</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">								
+ 								<select name="paises">  
+									<option>Uruguay</option>
+									<option>Argentina</option>
+									<option>Brasil</option>
+									<option>Paraguay</option>
+									<option>Chile</option>
+									<option>Bolivia</option>
+								</select>      
+								<label for="dateDp">Seleccionador</label>
+							</div>
+						</div>
+						<div class="row">
+							<label>
+								<input name="group1" value="rojo" type="radio" checked />
+								<span>Rojo</span>
+							</label>
+							<label>
+								<input name="group1" value="amarillo"  type="radio" />
+								<span>Amarillo</span>
+							</label>
+							<label>
+								<input name="group1" value="naranja" type="radio" />
+								<span>Naranja</span>
+							</label>
+							<label>
+								<input name="group1" value="verde"  type="radio" />
+								<span>Verde</span>
+							</label>
+						</div>
+						<div class="row">
+							<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+				
+		<br><br>
+<br><br><br><br><br><br><br><br><br>
+		</div>
+		<div id="test4" class="col s12">
+			<!-- Modal Trigger -->
+
+
+			<div class="container">
+				<h3>Modals</h3>
+				<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+				<a href="#" data-target="slide-out" class="btn red sidenav-trigger">	
+					Menu
+				</a>
+				<br><br>
+			</div>
+
+			<div class="parallax-container">
+				<div class="section no-pad-bot">
+					<div class="container">
+						<br><br>
+						<h1 class="header center red-text">Soy Tutulo!</h1>
+						<div class="row center">
+							<h5 class="header col s12 red-text  text-datrken-6 hide-on-med-and-down center">Soy Texto.</h5>
+						</div>
+						<div class="row center">
+							<a id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+						</div>
+						<br><br>		
+					</div>
+				</div>
+				<div class="parallax"><img src="img/parallax1.jpg"></div>
+			</div>
+			<div class="section white">
+				<div class="container">
+					<h2 class="header">Parallax</h2>
+					<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+				</div>
+			</div>
+			<div class="parallax-container">
+				<div class="parallax"><img src="img/parallax2.jpg"></div>
+			</div>
+			  <!-- Modal Structure -->
+			<div id="modal1" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4>Modal Header</h4>
+					<p>A bunch of text</p>
+					<div class="container">
+						<form class="col s12" action="https://materializecss.com/modals.html#!" method="POST" >
+							<div class="row">
+								<div class="input-field col s6">
+									<input 
+										class="validate" 
+										id="first_name" 
+										type="text" 
+										placeholder="texto">
+									<label for="first_name">Nombre</label>
+								</div>
+								<div class="input-field col s6">
+									<input 
+										class="validate" 
+										id="last_name" 
+										type="text">
+									<label for="last_name">Apellidos</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input class="validate" id="disabled" type="text" disabled value="I am not editable">
+									<label for="disabled">Disabled</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input class="validate" id="password" type="password">
+									<label for="password">Password</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input class="validate" id="email" type="email">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input class="validate" id="number" type="number">
+									<label for="number">Numero</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input class="validate" id="date" type="date">
+									<label for="date">Fecha</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s4">
+									<input type="text" class="datepicker">
+									<label for="dateDp">Fecha</label>
+								</div>
+								<div class="input-field col s4">
+									<input class="validate" id="time" type="time">
+									<label for="time">Hora</label>
+								</div>
+								<div class="input-field col s4">								
+	 								<input type="text" class="timepicker">        
+									<label for="dateDp">Hora</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">								
+	 								<select name="paises">  
+										<option>Uruguay</option>
+										<option>Argentina</option>
+										<option>Brasil</option>
+										<option>Paraguay</option>
+										<option>Chile</option>
+										<option>Bolivia</option>
+									</select>      
+									<label for="dateDp">Seleccionador</label>
+								</div>
+							</div>
+							<div class="row">
+								<label>
+									<input name="group1" value="rojo" type="radio" checked />
+									<span>Rojo</span>
+								</label>
+								<label>
+									<input name="group1" value="amarillo"  type="radio" />
+									<span>Amarillo</span>
+								</label>
+								<label>
+									<input name="group1" value="naranja" type="radio" />
+									<span>Naranja</span>
+								</label>
+								<label>
+									<input name="group1" value="verde"  type="radio" />
+									<span>Verde</span>
+								</label>
+							</div>
+							<div class="row">
+								<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+									<i class="material-icons right">send</i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+				</div>
+			</div>
+
+
+		</div>
+		<div id="test5" class="col s12">
+			
+			<div class="container">
+				<h3>Carrusel</h3>			
+				<div class="carousel carousel-slider center">
+					<div class="carousel-fixed-item center">
+						<a class="btn waves-effect white grey-text darken-text-2">button</a>
+					</div>
+					<div class="carousel-item red white-text" href="#one!">
+						<div class="row">
+							<div class="col s6 blue" style="height: 100%;">
+								<img src="img/parallax2.jpg" width="400px" height="200px">
+							</div>
+							<div class="col s6 teal" style="height: 100%;">
+								<h2>First Panel</h2>
+							</div>
+						</div>	
+						<p class="white-text">This is your first panel</p>
+					</div>
+					<div class="carousel-item amber white-text" href="#two!">
+						<h2>Second Panel</h2>
+						<p class="white-text">This is your second panel</p>
+					</div>
+					<div class="carousel-item green white-text" href="#three!">
+						<h2>Third Panel</h2>
+						<p class="white-text">This is your third panel</p>
+					</div>
+					<div class="carousel-item blue white-text" href="#four!">
+						<h2>Fourth Panel</h2>
+						<p class="white-text">This is your fourth panel</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul id="slide-out" class="sidenav">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="img/office.jpg">
+					</div>
+					<a href="#user"><img class="circle" src="img/yuna.jpg"></a>
+					<a href="#name"><span class="white-text name">John Doe</span></a>
+					<a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+				</div>
+			</li>
+			<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+			<li><a href="#!">Second Link</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Subheader</a></li>
+			<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+			<li><div class="divider"></div></li>
+			<li><a href="https://www.tranza.com" target="_blank">First Link With Icon<i class="material-icons red-text right">person</i></a></li>
+			<li>
+				<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+				<!-- Dropdown Structure -->
+				<ul id='dropdown1' class='dropdown-content'>
+					<li><a href="#!">one</a></li>
+					<li><a href="#!">two</a></li>
+					<li class="divider" tabindex="-1"></li>
+					<li><a href="#!">three</a></li>
+					<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+					<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+				</ul>
+			</li>
+		</ul> 
+
+		<div class="fixed-action-btn">
+			<a class="btn-floating btn-large red">
+				<i class="large material-icons">mode_edit</i>
+			</a>
+			<ul>
+				<li>
+					<a href="#" data-target="slide-out" class="btn btn-floating red sidenav-trigger">
+						<i class="material-icons">insert_chart</i>
+					</a>
+				</li>
+				<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+			</ul>
+		</div>
+      
+		<!--JavaScript at end of body for optimized loading-->
+
+		<footer class="page-footer voyAbajo">
+		
+			<div class="footer-copyright">
+				<div class="container">
+					© 2014 Copyright Text
+					<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+
+			document.addEventListener('DOMContentLoaded', function(){
+
+				M.AutoInit();
+
+				var elems = document.querySelectorAll('.datepicker');
+    			var instances = M.Datepicker.init(elems, options);
+
+				var instance = M.Carousel.init({
+				    fullWidth: true,
+				    indicators: true
+				});
+				var elems = document.querySelectorAll('.sidenav');
+			    var instances = M.Sidenav.init(elems, options);	
+
+			});
+
+		</script>
+	</body>
   </html>
